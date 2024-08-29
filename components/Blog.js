@@ -97,10 +97,15 @@ export default function Blog(
             <div className='w-100 flex flex-col flex-left mb-2' data-aos="fade-up">
                 <label htmlFor="catergory">Select Category (ctrl + leftclick for multiple select)</label>
                 <select onChange={(e) => setBlogcategory(Array.from(e.target.selectedOptions, option => option.value))} name="catergory" id="catergory" multiple value={blogcategory} >
-                    <option value="htmlcssjs">Html, Css & javaScript</option>
+                    <option value="htmlcssjs">Html, Css & typeScript</option>
                     <option value="nextjs">Next Js, React js</option>
                     <option value="database">Database</option>
                     <option value="deployment">Deployment</option>
+                    <option value="nest">Nest</option>
+                    <option value="angular">Angular</option>
+                    <option value="tailwind">Tailwind</option>
+                    <option value="web">Web para negocios</option>
+                    <option value="recursos">Recursos ùtiles</option>
                 </select>
                 <p className="existingcategory flex gap-1 mt-1 mb-1">Selected: {Array.isArray(existingBlogcategory) && existingBlogcategory.map(category => (
                     <span key={category}>{category}</span>
@@ -149,9 +154,17 @@ export default function Blog(
                     <option value="html">Html</option>
                     <option value="css">css</option>
                     <option value="javascript">javaScript</option>
+                    <option value="typescript">typeScript</option>
                     <option value="nextjs">Next Js</option>
                     <option value="reactjs">react Js</option>
                     <option value="database">Database</option>
+                    <option value="tailwind">Tailwind</option>
+                    <option value="recursos">Recursos</option>
+                    <option value="nest">Nest</option>
+                    <option value="web">Web</option>
+                    <option value="angular">Angular</option>
+                    <option value="mongodb">MongoDB</option>
+                    <option value="postgres">Postgres</option>
                 </select>
                 <p className="existingcategory flex gap-1 mt-1 mb-1">Selected: {existingTags && existingTags.length > 0 && (
                     <span>{existingTags}</span>
